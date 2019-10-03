@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+
 Hello World
+
+<script>
+  function one(callback, callback2) {
+    callback();
+    callback2();
+  }
+
+  one(
+    function() {
+      console.log('callback');
+    },
+    function() {
+      console.log('callback2');
+    }
+  );
+
+  var words = [
+    'spray',
+    'limit',
+    'elite',
+    'exuberant',
+    'destruction',
+    'present'
+  ];
+
+  const result = words.filter(word => word.length > 6);
+  const result2 = words.filter(function(word) {
+    return word.length > 6;
+  });
+
+  console.log(result);
+</script>
